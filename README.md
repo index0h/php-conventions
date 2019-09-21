@@ -1345,7 +1345,7 @@ mock-интерфейс.
 >     ->expects($this->once())    // Или `->expects($this->at($mockObjectIncrement++))`
 >     ->method('methodName')
 >     ->with(...$methodArguments)
->     ->willReturn($methodResult) // Или `->willReturnSelf();`
+>     ->willThrowException($exception);
 > ```
 
 5. Метод `methodName` mock-объекта `$mockObject` ДОЛЖЕН быть вызван один раз без аргументов и бросить исключение
