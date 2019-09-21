@@ -1364,6 +1364,8 @@ mock-интерфейс.
 
 Для разработки php проектов РЕКОМЕНДУЕТСЯ использовать [PhpStorm](https://www.jetbrains.com/phpstorm/).
 
-#### TODO
-Настройки code style РЕКОМЕНДУЕТСЯ импортировать из файла `phpstorm/codeStyle.xml` текущего репозитория.
-Настройки инспекций РЕКОМЕНДУЕТСЯ импортировать из файла `phpstorm/inspections.xml` текущего репозитория.
+### 9.1. Инспекции
+
+Настройки инспекций РЕКОМЕНДУЕТСЯ [импортировать](https://www.jetbrains.com/help/phpstorm/customizing-profiles.html) из
+`phpstorm/sourcebucket-php-conventions-inspections.xml`.
+
