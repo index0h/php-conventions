@@ -1367,5 +1367,5 @@ mock-интерфейс.
 ### 9.1. Инспекции
 
 Настройки инспекций РЕКОМЕНДУЕТСЯ [импортировать](https://www.jetbrains.com/help/phpstorm/customizing-profiles.html) из
-`phpstorm/sourcebucket-php-conventions-inspections.xml`.
+`phpstorm/php-conventions-inspections.xml`.
 

@@ -1,5 +1,5 @@
 <profile version="1.0">
-  <option name="myName" value="sourcebucket" />
+  <option name="myName" value="php-conventions" />
   <inspection_tool class="AnnotationDeprecatedInspection" enabled="true" level="ERROR" enabled_by_default="true" />
   <inspection_tool class="AnnotationMissingUseInspection" enabled="true" level="ERROR" enabled_by_default="true" />
   <inspection_tool class="DuplicatedCode" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
