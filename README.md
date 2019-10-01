@@ -115,6 +115,7 @@ $variableName = '123456790123456790123456790123456790123456790123456790123456790
     'firstElementWithVeryLongNameHere' => 'elementName',
 
     'elementName' => '123456790123456790123456790123456790123456790123456790123456790123456790123456790',
+]
 ```
 
 ### 1.4. Массивы
@@ -705,7 +706,8 @@ while ($row = next($rows)) {
 > Пример:
 
 ```php
-// Без @ тут будет Warning: fopen(path/to/not/exists/file): failed to open stream: No such file or directory
+// Без @ будет ошибка:
+// Warning: fopen(path/to/not/exists/file): failed to open stream: No such file or directory
 $file = @fopen('path/to/not/exists/file', 'r');
 
 if ($file === false) {
@@ -751,7 +753,7 @@ if ($file === false) {
 
 > Динамическая подстановка имен сильно усложняет чтение и отладку кода потому, что конечные имена определяются только
 > в рантайме.
-
+>
 > Пример:
 
 ```php
@@ -844,8 +846,8 @@ $this->{$methodName}($argument);
 `Singleton` РЕКОМЕНДУЕТСЯ считать антишаблоном и не использовать его. Вместо этого РЕКОМЕНДУЕТСЯ использовать
 `Dependency Ingection`.
 
-> Проблема `Singleton` заключается в том, что состояние объекта, как правило, хранится в статическом свойстве, и является
-> не явным аргументом метода, или функции, см. пункт `4.10.` данных рекомендаций.
+> Проблема `Singleton` заключается в том, что состояние объекта, как правило, хранится в статическом свойстве, и
+> является не явным аргументом метода, или функции, см. пункт `4.10.` данных рекомендаций.
 
 ## 7. Тестирование
 
@@ -857,7 +859,8 @@ $this->{$methodName}($argument);
 
 ```php
 // Для данного метода ДОЛЖНО быть 3 теста.
-// 1. Число $number кратно $divider, что бы проверить корректность преобразование типа. Например `divide(4, 2);`.
+// 1. Число $number кратно $divider, что бы проверить корректность преобразование типа.
+// Например `divide(4, 2);`.
 // 2. Число $number не кратно $divider. Например `divide(1, 2);`.
 // 3. Число $number не кратно $divider. Например `divide(3, 0);`.
 public function divide(int $number, int $divider): float.
@@ -1314,61 +1317,61 @@ $logger = $this->createMock(LoggerInterface::class);
 1. Метод `methodName` mock-объекта `$mockObject` НЕ ДОЛЖЕН быть вызван.
 
 > Пример:
->
-> ```php
-> $mockObject
->     ->expects($this->never())
->     ->method('methodName');
-> ```
+
+```php
+$mockObject
+    ->expects($this->never())
+    ->method('methodName');
+```
 
 2. Метод `methodName` mock-объекта `$mockObject` ДОЛЖЕН быть вызван с аргументами `$methodArguments` и вернуть
 результат.
 
 > Пример:
->
-> ```php
-> $mockObject
->     ->expects($this->once())    // Или `->expects($this->at($mockObjectIncrement++))`
->     ->method('methodName')
->     ->with(...$methodArguments)
->     ->willReturn($methodResult) // Или `->willReturnSelf();`
-> ```
+
+```php
+$mockObject
+    ->expects($this->once())    // Или `->expects($this->at($mockObjectIncrement++))`
+    ->method('methodName')
+    ->with(...$methodArguments)
+    ->willReturn($methodResult) // Или `->willReturnSelf();`
+```
 
 3. Метод `methodName` mock-объекта `$mockObject` ДОЛЖЕН быть вызван один раз без аргументов и вернуть результат.
 
 > Пример:
->
-> ```php
-> $mockObject
->     ->expects($this->once())    // Или `->expects($this->at($mockObjectIncrement++))`
->     ->method('methodName')
->     ->willReturn($methodResult) // Или `->willReturnSelf();`
-> ```
+
+```php
+$mockObject
+    ->expects($this->once())    // Или `->expects($this->at($mockObjectIncrement++))`
+    ->method('methodName')
+    ->willReturn($methodResult) // Или `->willReturnSelf();`
+```
 
 4. Метод `methodName` mock-объекта `$mockObject` ДОЛЖЕН быть вызван с аргументами `$methodArguments` и бросить
 исключение `$exception`.
 
 > Пример:
->
-> ```php
-> $mockObject
->     ->expects($this->once())    // Или `->expects($this->at($mockObjectIncrement++))`
->     ->method('methodName')
->     ->with(...$methodArguments)
->     ->willThrowException($exception);
-> ```
+
+```php
+$mockObject
+    ->expects($this->once())    // Или `->expects($this->at($mockObjectIncrement++))`
+    ->method('methodName')
+    ->with(...$methodArguments)
+    ->willThrowException($exception);
+```
 
 5. Метод `methodName` mock-объекта `$mockObject` ДОЛЖЕН быть вызван один раз без аргументов и бросить исключение
 `$exception`.
 
 > Пример:
->
-> ```php
-> $mockObject
->     ->expects($this->once()) // Или `->expects($this->at($mockObjectIncrement++))`
->     ->method('methodName')
->     ->willThrowException($exception);
-> ```
+
+```php
+$mockObject
+    ->expects($this->once()) // Или `->expects($this->at($mockObjectIncrement++))`
+    ->method('methodName')
+    ->willThrowException($exception);
+```
 
 ## 9. IDE
 
