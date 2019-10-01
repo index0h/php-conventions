@@ -1374,7 +1374,7 @@ $mockObject
 
 Настройки инспекций РЕКОМЕНДУЕТСЯ [импортировать](https://www.jetbrains.com/help/phpstorm/customizing-profiles.html) из
 `phpstorm/php-conventions-inspections.xml`. Данные инспекции используют
-[PHP_CodeSniffer](jetbrains.com/help/phpstorm/using-php-code-sniffer.html).
+[PHP_CodeSniffer](https://www.jetbrains.com/help/phpstorm/using-php-code-sniffer.html).
 
 Настройки код стайла РЕКОМЕНДУЕТСЯ [импортировать](https://www.jetbrains.com/help/phpstorm/configuring-code-style.html)
 из `phpstorm/php-conventions-code-style.xml`.
