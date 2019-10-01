@@ -862,7 +862,7 @@ $this->{$methodName}($argument);
 // 1. Число $number кратно $divider, что бы проверить корректность преобразование типа.
 // Например `divide(4, 2);`.
 // 2. Число $number не кратно $divider. Например `divide(1, 2);`.
-// 3. Число $number не кратно $divider. Например `divide(3, 0);`.
+// 3. Число $divider равно 0. Например `divide(3, 0);`.
 public function divide(int $number, int $divider): float.
 {
     if ($divider === 0) {
