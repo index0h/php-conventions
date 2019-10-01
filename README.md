@@ -24,12 +24,12 @@
 > Это требование дополняет [PSR-12 2.3. Lines](https://www.php-fig.org/psr/psr-12/#23-lines).
 >
 > Пример:
->
-> ```php
-> // @codingStandardsIgnoreStart
-> use VendorWithVerlyLongName\ProjectrWithVerlyLongName\ServicesWithVerlyLongName\ServiceFolderWithVerlyLongName\ClassWithVerlyLongName;
-> // @codingStandardsIgnoreStop
-> ```
+
+```php
+// @codingStandardsIgnoreStart
+use VendorWithVerlyLongName\ProjectrWithVerlyLongName\ServicesWithVerlyLongName\ServiceFolderWithVerlyLongName\ClassWithVerlyLongName;
+// @codingStandardsIgnoreStop
+```
 
 ### 1.3. Выравнивание присвоений переменных и элементов массива
 
@@ -41,81 +41,81 @@
    при этом оператор присвоения ДОЛЖЕН остаться на той же строке, что и переменная.
 
 > Пример:
->
-> ```php
-> // Правильно
-> $varName      = 'varName';
-> $variableName = 'variableName';
-> ```
->
-> ```php
-> // Не правильно
-> $varName = 'varName';
-> $variableName = 'variableName';
-> ```
->
-> ```php
-> // Правильно
-> $varName                            = 'varName';
-> $secondVariableWithVeryLongNameHere =
->     '123456790123456790123456790123456790123456790123456790123456790123456790123456790';
-> ```
->
-> ```php
-> // Не правильно
-> $varName                            = 'varName';
-> $secondVariableWithVeryLongNameHere
->     = '123456790123456790123456790123456790123456790123456790123456790123456790123456790';
-> ```
->
-> ```php
-> // Правильно
-> $firstVariableWithVeryLongNameHere = 'varName';
->
-> $variableName = '123456790123456790123456790123456790123456790123456790123456790123456790123456790';
-> ```
->
-> ```php
-> // Правильно
-> [
->     'elementName'     => 'elementName',
->     'longNameElement' => 'longNameElement',
-> ]
-> ```
->
-> ```php
-> // Не правильно
-> [
->     'elementName' => 'elementName',
->     'longNameElement' => 'longNameElement',
-> ]
-> ```
->
-> ```php
-> // Правильно
-> [
->     'elementName'                       => 'elementName',
->     'secondElementWithVeryLongNameHere' =>
->         '123456790123456790123456790123456790123456790123456790123456790123456790123456790',
-> ]
-> ```
->
-> ```php
-> // Не правильно
-> [
->     'elementName'                       => 'elementName',
->     'secondElementWithVeryLongNameHere'
->         => '123456790123456790123456790123456790123456790123456790123456790123456790123456790',
-> ]
-> ```
->
-> ```php
-> // Правильно
-> [
->     'firstElementWithVeryLongNameHere' => 'elementName',
->
->     'elementName' => '123456790123456790123456790123456790123456790123456790123456790123456790123456790',
-> ```
+
+```php
+// Правильно
+$varName      = 'varName';
+$variableName = 'variableName';
+```
+
+```php
+// Не правильно
+$varName = 'varName';
+$variableName = 'variableName';
+```
+
+```php
+// Правильно
+$varName                            = 'varName';
+$secondVariableWithVeryLongNameHere =
+    '123456790123456790123456790123456790123456790123456790123456790123456790123456790';
+```
+
+```php
+// Не правильно
+$varName                            = 'varName';
+$secondVariableWithVeryLongNameHere
+    = '123456790123456790123456790123456790123456790123456790123456790123456790123456790';
+```
+
+```php
+// Правильно
+$firstVariableWithVeryLongNameHere = 'varName';
+
+$variableName = '123456790123456790123456790123456790123456790123456790123456790123456790123456790';
+```
+
+```php
+// Правильно
+[
+    'elementName'     => 'elementName',
+    'longNameElement' => 'longNameElement',
+]
+```
+
+```php
+// Не правильно
+[
+    'elementName' => 'elementName',
+    'longNameElement' => 'longNameElement',
+]
+```
+
+```php
+// Правильно
+[
+    'elementName'                       => 'elementName',
+    'secondElementWithVeryLongNameHere' =>
+        '123456790123456790123456790123456790123456790123456790123456790123456790123456790',
+]
+```
+
+```php
+// Не правильно
+[
+    'elementName'                       => 'elementName',
+    'secondElementWithVeryLongNameHere'
+        => '123456790123456790123456790123456790123456790123456790123456790123456790123456790',
+]
+```
+
+```php
+// Правильно
+[
+    'firstElementWithVeryLongNameHere' => 'elementName',
+
+    'elementName' => '123456790123456790123456790123456790123456790123456790123456790123456790123456790',
+```
 
 ### 1.4. Массивы
 
@@ -123,33 +123,33 @@
 для однострочного массива запятую ставить НЕДОПУСТИМО.
 
 > Пример:
->
-> ```php
-> // Правильно
-> [
->     'firstElement'  => 'firstElement',
->     'secondElement' => 'secondElement',
-> ]
-> ```
->
-> ```php
-> // Не правильно
-> [
->     'firstElement'  => 'firstElement',
->     'secondElement' => 'secondElement'
-> ]
-> ```
->
-> ```php
-> // Правильно
-> ['firstElement' => 'firstElement', 'secondElement' => 'secondElement']
-> ```
->
-> ```php
-> // Не правильно
-> ['firstElement' => 'firstElement', 'secondElement' => 'secondElement',]
-> ```
->
+
+```php
+// Правильно
+[
+    'firstElement'  => 'firstElement',
+    'secondElement' => 'secondElement',
+]
+```
+
+```php
+// Не правильно
+[
+    'firstElement'  => 'firstElement',
+    'secondElement' => 'secondElement'
+]
+```
+
+```php
+// Правильно
+['firstElement' => 'firstElement', 'secondElement' => 'secondElement']
+```
+
+```php
+// Не правильно
+['firstElement' => 'firstElement', 'secondElement' => 'secondElement',]
+```
+
 
 ### 1.5. Последовательность вызовов (Chaining)
 
@@ -158,62 +158,62 @@
 ДОЛЖЕН находиться на новой строке.
 
 > Пример:
->
-> ```php
-> // Правильно
-> $this->firstMethod();
-> ```
->
-> ```php
-> // Не правильно
-> $this
->     ->firstMethod();
-> ```
->
-> ```php
-> // Правильно
-> $this
->     ->firstMethod()
->     ->secondMethod();
-> ```
->
-> ```php
-> // Не правильно
-> $this->firstMethod()->secondMethod();
-> ```
->
-> ```php
-> // Не правильно
-> $this
->     ->firstMethod()->secondMethod();
-> ```
->
-> ```php
-> // Правильно
-> $this
->     ->firstMethod()
->     ->thirdMethod(
->         $firstArgument,
->         $secondArgument,
->         $thirdArgument,
->         $fourthArgument,
->         $fifthArgument,
->         $sixArgument
->     );
-> ```
->
-> ```php
-> // Не правильно
-> $this->firstMethod()->thirdMethod(
->     $firstArgument,
->     $secondArgument,
->     $thirdArgument,
->     $fourthArgument,
->     $fifthArgument,
->     $sixArgument
-> );
-> ```
->
+
+```php
+// Правильно
+$this->firstMethod();
+```
+
+```php
+// Не правильно
+$this
+    ->firstMethod();
+```
+
+```php
+// Правильно
+$this
+    ->firstMethod()
+    ->secondMethod();
+```
+
+```php
+// Не правильно
+$this->firstMethod()->secondMethod();
+```
+
+```php
+// Не правильно
+$this
+    ->firstMethod()->secondMethod();
+```
+
+```php
+// Правильно
+$this
+    ->firstMethod()
+    ->thirdMethod(
+        $firstArgument,
+        $secondArgument,
+        $thirdArgument,
+        $fourthArgument,
+        $fifthArgument,
+        $sixArgument
+    );
+```
+
+```php
+// Не правильно
+$this->firstMethod()->thirdMethod(
+    $firstArgument,
+    $secondArgument,
+    $thirdArgument,
+    $fourthArgument,
+    $fifthArgument,
+    $sixArgument
+);
+```
+
 
 ### 1.6. Выделение управляющих инструкций
 
@@ -221,48 +221,48 @@
 ДОЛЖНЫ отделяться от кода того же уровня вложенности одной пустой строкой.
 
 > Пример:
->
-> ```php
-> // Правильно
-> $count = 5;
->
-> if ($count === 5) {
-> // ...
-> }
->
-> // ...
-> ```
->
-> ```php
-> // Не правильно
-> $count = 5; // Отсутствует перевод строки
-> if ($count === 5) {
-> // ...
-> }
-> $length = 12; // Отсутствует перевод строки
-> // ...
-> ```
->
-> ```php
-> // Правильно
-> {
->     if ($count === 5) {
->     // ...
->     }
-> }
-> ```
->
-> ```php
-> // Не правильно
-> {
->
->     // Лишняя пустая строка
->     if ($count === 5) {
->     // ...
->     }
->     // Лишняя пустая строка
-> }
-> ```
+
+```php
+// Правильно
+$count = 5;
+
+if ($count === 5) {
+// ...
+}
+
+// ...
+```
+
+```php
+// Не правильно
+$count = 5; // Отсутствует перевод строки
+if ($count === 5) {
+// ...
+}
+$length = 12; // Отсутствует перевод строки
+// ...
+```
+
+```php
+// Правильно
+{
+    if ($count === 5) {
+    // ...
+    }
+}
+```
+
+```php
+// Не правильно
+{
+
+    // Лишняя пустая строка
+    if ($count === 5) {
+    // ...
+    }
+    // Лишняя пустая строка
+}
+```
 
 ## 2. Документирование
 
@@ -276,51 +276,51 @@
 Указание типов аргументов с помощью `@param` и `@return`, дублирующее сигнатуру метода НЕДОПУСТИМО.
 
 > Пример:
->
-> ```php
-> // Правильно
-> public function incrementProductPriceByName(string $productName, float $price): bool
-> {
-> // ...
-> ```
->
-> ```php
-> // Не правильно
-> /**
->  * @param string $productName
->  * @param float  $price
->  * @return bool
->  */
-> public function incrementProductPriceByName(string $productName, float $price): bool
-> {
-> // ...
-> ```
+
+```php
+// Правильно
+public function incrementProductPriceByName(string $productName, float $price): bool
+{
+// ...
+```
+
+```php
+// Не правильно
+/**
+ * @param string $productName
+ * @param float  $price
+ * @return bool
+ */
+public function incrementProductPriceByName(string $productName, float $price): bool
+{
+// ...
+```
 
 ### 2.3. Массивы в docblock
 
 Типы элементов массивов РЕКОМЕНДУЕТСЯ уточнять в docblock.
 
 > Пример:
->
-> ```php
-> // Правильно
-> /**
->  * @param string[] $productNames
->  */
-> public function incrementProductPricesByNames(array $productNames, float $price): bool
-> {
-> // ...
-> ```
->
-> ```php
-> // Не правильно
-> /**
->  * @param array $productNames
->  */
-> public function incrementProductPricesByNames(array $productNames, float $price): bool
-> {
-> // ...
-> ```
+
+```php
+// Правильно
+/**
+ * @param string[] $productNames
+ */
+public function incrementProductPricesByNames(array $productNames, float $price): bool
+{
+// ...
+```
+
+```php
+// Не правильно
+/**
+ * @param array $productNames
+ */
+public function incrementProductPricesByNames(array $productNames, float $price): bool
+{
+// ...
+```
 
 ### 2.4. Неопределенные типы аргументов и возвращаемых результатов
 
@@ -328,28 +328,28 @@
 допустимые типы в docblock.
 
 > Пример:
->
-> ```php
-> // Правильно
-> /**
->  * @param string|int $stringOrIntArgument
->  * @return float|string|object
->  */
-> public function mixedMethod($stringOrIntArgument)
-> {
-> // ...
-> ```
->
-> ```php
-> // Не правильно
-> /**
->  * @param mixed $stringOrIntArgument
->  * @return mixed
->  */
-> public function mixedMethod($stringOrIntArgument)
-> {
-> // ...
-> ```
+
+```php
+// Правильно
+/**
+ * @param string|int $stringOrIntArgument
+ * @return float|string|object
+ */
+public function mixedMethod($stringOrIntArgument)
+{
+// ...
+```
+
+```php
+// Не правильно
+/**
+ * @param mixed $stringOrIntArgument
+ * @return mixed
+ */
+public function mixedMethod($stringOrIntArgument)
+{
+// ...
+```
 
 ### 2.5. Тип переменных
 
@@ -357,42 +357,42 @@
 Так же необходимо указывать ожидаемый тип, если IDE не может его определить, или определяет не корректно.
 
 > Пример:
->
-> ```php
-> $rows = [
->     [
->         'id'        => 1,
->         'createdAt' => new \DateTimeImmutable(),
->     ],
->     [
->         'id'        => 2,
->         'createdAt' => new \DateTimeImmutable(),
->     ],
->     // ...
-> ];
->
-> foreach ($rows as $row) {
->     /** @var int $id */
->     $id = $row['id'];
->     /** @var \DateTimeImmutable $createdAt */
->     $createdAt = $row['createdAt'];
->     // ...
-> }
-> ```
+
+```php
+$rows = [
+    [
+        'id'        => 1,
+        'createdAt' => new \DateTimeImmutable(),
+    ],
+    [
+        'id'        => 2,
+        'createdAt' => new \DateTimeImmutable(),
+    ],
+    // ...
+];
+
+foreach ($rows as $row) {
+    /** @var int $id */
+    $id = $row['id'];
+    /** @var \DateTimeImmutable $createdAt */
+    $createdAt = $row['createdAt'];
+    // ...
+}
+```
 
 ### 2.6. Свойства
 
 Свойства класса ДОЛЖНЫ содержать однострочный docblock, определяющий все возможные типы значений, допустимые в нем.
 
 > Пример:
->
-> ```php
-> /** @var string[]|null */
-> private $names;
->
-> /** @var int|null */
-> private $count;
-> ```
+
+```php
+/** @var string[]|null */
+private $names;
+
+/** @var int|null */
+private $count;
+```
 
 ## 3. Объявление констант, свойств и методов
 
@@ -420,18 +420,18 @@
 Названия свойств ДОЛЖНЫ описывать предназначение данных, которые они хранят.
 
 > Пример:
->
-> ```php
-> // Правильно
-> /** @var string[] */
-> private $userNames;
-> ```
->
-> ```php
-> // Не правильно
-> /** @var string[] */
-> private $data;
-> ```
+
+```php
+// Правильно
+/** @var string[] */
+private $userNames;
+```
+
+```php
+// Не правильно
+/** @var string[] */
+private $data;
+```
 
 ### 3.3. Разделение свойств
 
@@ -440,53 +440,53 @@
 Если свойство объявляется, как последний элемент класса — пустая строка после него НЕДОПУСТИМА.
 
 > Пример:
->
-> ```php
-> // Правильно
-> /** @var string[] */
-> private $userNames;
->
-> /** @var int[] */
-> private $userIds;
-> ```
->
-> ```php
-> // Не правильно
-> /** @var string[] */
-> private $userNames;
-> /** @var int[] */
-> private $userIds;
-> ```
->
-> ```php
-> // Правильно
-> {
->     /** @var string[] */
->     private $userNames;
-> ```
->
-> ```php
-> // Не правильно
-> {
->
->     /** @var string[] */
->     private $userNames;
-> ```
->
-> ```php
-> // Правильно
->     /** @var string[] */
->     private $userNames;
-> }
-> ```
->
-> ```php
-> // Не правильно
->     /** @var string[] */
->     private $userNames;
->
-> }
-> ```
+
+```php
+// Правильно
+/** @var string[] */
+private $userNames;
+
+/** @var int[] */
+private $userIds;
+```
+
+```php
+// Не правильно
+/** @var string[] */
+private $userNames;
+/** @var int[] */
+private $userIds;
+```
+
+```php
+// Правильно
+{
+    /** @var string[] */
+    private $userNames;
+```
+
+```php
+// Не правильно
+{
+
+    /** @var string[] */
+    private $userNames;
+```
+
+```php
+// Правильно
+    /** @var string[] */
+    private $userNames;
+}
+```
+
+```php
+// Не правильно
+    /** @var string[] */
+    private $userNames;
+
+}
+```
 
 ### 3.4. Модификаторы доступа для свойств
 
@@ -502,16 +502,16 @@
 Названия методов ДОЛЖНЫ описывать предназначение их использования внешним кодом, а не детали реализации.
 
 > Пример:
->
-> ```php
-> // Правильно
-> public function findUserById(int $id): ?User
-> ```
->
-> ```php
-> // Не правильно
-> public function find(int $id): ?User
-> ```
+
+```php
+// Правильно
+public function findUserById(int $id): ?User
+```
+
+```php
+// Не правильно
+public function find(int $id): ?User
+```
 
 ### 3.6. Разделение методов
 
@@ -520,53 +520,53 @@
 Если метод объявляется, как последний элемент класса — пустая строка после него НЕДОПУСТИМА.
 
 > Пример:
->
-> ```php
-> // Правильно
-> public function findUserById(int $id): ?User
-> // ...
-> }
->
-> public function findUserByName(string $name): ?User
-> // ...
-> }
-> ```
->
-> ```php
-> // Не правильно
-> public function findUserById(int $id): ?User
-> // ...
-> }
-> public function findUserByName(string $name): ?User
-> // ...
-> }
-> ```
->
-> ```php
-> // Правильно
-> {
->     public function findUserById(int $id): ?User
-> ```
->
-> ```php
-> // Не правильно
-> {
->
->     public function findUserById(int $id): ?User
-> ```
->
-> ```php
-> // Правильно
->     public function findUserById(int $id): ?User
-> }
-> ```
->
-> ```php
-> // Не правильно
->     public function findUserById(int $id): ?User
->
-> }
-> ```
+
+```php
+// Правильно
+public function findUserById(int $id): ?User
+// ...
+}
+
+public function findUserByName(string $name): ?User
+// ...
+}
+```
+
+```php
+// Не правильно
+public function findUserById(int $id): ?User
+// ...
+}
+public function findUserByName(string $name): ?User
+// ...
+}
+```
+
+```php
+// Правильно
+{
+    public function findUserById(int $id): ?User
+```
+
+```php
+// Не правильно
+{
+
+    public function findUserById(int $id): ?User
+```
+
+```php
+// Правильно
+    public function findUserById(int $id): ?User
+}
+```
+
+```php
+// Не правильно
+    public function findUserById(int $id): ?User
+
+}
+```
 
 ### 3.7. Модификаторы доступа для методов
 
@@ -587,14 +587,14 @@
 4. Аргумент с `...`.
 
 > Пример:
->
-> ```php
-> public function firstExample(string $first, ?int $second, bool $third = false, float ...$fourth): string
-> // ...
-> public function secondExample(?int $second, bool $third = false, float ...$fourth): string
-> // ...
-> public function thirdExample(bool $third = false, float ...$fourth): string
-> ```
+
+```php
+public function firstExample(string $first, ?int $second, bool $third = false, float ...$fourth): string
+// ...
+public function secondExample(?int $second, bool $third = false, float ...$fourth): string
+// ...
+public function thirdExample(bool $third = false, float ...$fourth): string
+```
 
 ### 3.9. Массив в виде аргумента
 
@@ -602,19 +602,19 @@
 с помощью оператора `...`.
 
 > Пример:
->
-> ```php
-> // Правильно
-> public function concatStrings(string ...$parts): string
-> ```
->
-> ```php
-> // Не правильно
-> /**
->  * @param string $parts
->  */
-> public function concatStrings(array $parts): string
-> ```
+
+```php
+// Правильно
+public function concatStrings(string ...$parts): string
+```
+
+```php
+// Не правильно
+/**
+ * @param string $parts
+ */
+public function concatStrings(array $parts): string
+```
 
 ## 4. Безопасность
 
@@ -627,11 +627,11 @@
 > так же они могут приводить к не предсказуемым последствиям.
 >
 > Пример:
->
-> ```php
-> echo 5 + '5abc5';
-> // 10
-> ```
+
+```php
+echo 5 + '5abc5';
+// 10
+```
 
 ### 4.2. Сравнения с преобразованием типов
 
@@ -641,14 +641,14 @@
 > Проблемы тут те же, что и при неявном приведении типов.
 >
 > Пример:
->
-> ```php
-> if ('abc' == 0) {
->     echo 'wat';
-> }
->
-> // wat
-> ```
+
+```php
+if ('abc' == 0) {
+    echo 'wat';
+}
+
+// wat
+```
 
 ### 4.3. Инструкция switch
 
@@ -658,16 +658,16 @@
 > Это может привести к тем же проблемам, что и неявное приведение типов.
 >
 > Пример:
->
-> ```php
-> switch ('abc') {
->     case 0:
->         echo 'wat';
->         break;
-> }
->
-> // wat
-> ```
+
+```php
+switch ('abc') {
+    case 0:
+        echo 'wat';
+        break;
+}
+
+// wat
+```
 
 ### 4.4. Присвоения в условных операциях
 
@@ -677,16 +677,16 @@
 > Выражения в скобках неявно приводятся к `bool`, что может привести к неожиданным последствиям.
 >
 > Пример:
->
-> ```php
-> $rows = [0, null, ''];
->
-> while ($row = next($rows)) {
->     printf("\$row = %s\n", var_dump($row, true));
-> }
->
-> // Ничего не выведет
-> ```
+
+```php
+$rows = [0, null, ''];
+
+while ($row = next($rows)) {
+    printf("\$row = %s\n", var_dump($row, true));
+}
+
+// Ничего не выведет
+```
 
 ### 4.5. Ошибки
 
@@ -703,15 +703,15 @@
 В случае подавления ошибки ДОЛЖНО быть брошено исключение с описанием причин возникновения ошибки.
 
 > Пример:
->
-> ```php
-> // Без @ тут будет Warning: fopen(path/to/not/exists/file): failed to open stream: No such file or directory
-> $file = @fopen('path/to/not/exists/file', 'r');
->
-> if ($file === false) {
->     throw new \RuntimeException('Could not open file: "path/to/not/exists/file"');
-> }
-> ```
+
+```php
+// Без @ тут будет Warning: fopen(path/to/not/exists/file): failed to open stream: No such file or directory
+$file = @fopen('path/to/not/exists/file', 'r');
+
+if ($file === false) {
+    throw new \RuntimeException('Could not open file: "path/to/not/exists/file"');
+}
+```
 
 ### 4.7. goto
 
@@ -753,11 +753,11 @@
 > в рантайме.
 
 > Пример:
->
-> ```php
-> // Не правильно
-> $this->{$methodName}($argument);
-> ```
+
+```php
+// Не правильно
+$this->{$methodName}($argument);
+```
 
 ### 4.13. Магические методы
 
@@ -854,46 +854,46 @@
 Каждый метод (функция) ДОЛЖНЫ быть покрыты тестами для всех возможных вариантов выполнения метода (функции).
 
 > Пример:
->
-> ```php
-> // Для данного метода ДОЛЖНО быть 3 теста.
-> // 1. Число $number кратно $divider, что бы проверить корректность преобразование типа. Например `divide(4, 2);`.
-> // 2. Число $number не кратно $divider. Например `divide(1, 2);`.
-> // 3. Число $number не кратно $divider. Например `divide(3, 0);`.
-> public function divide(int $number, int $divider): float.
-> {
->     if ($divider === 0) {
->         throw new \InvalidArgumentException('Argument "$divider" must be not zero');
->     }
->
->     return (float) $number / $divider;
-> }
->
-> // Для данного метода ДОЛЖНО быть 4 теста.
-> // 1. Название команды соответствует `self::FIRST_COMMAND`.
-> // 2. Название команды соответствует `self::SECOND_COMMAND`.
-> // 3. Название команды - пустая строка.
-> // 4. Команда не найдена.
-> public function execute(string $commandName): void
-> {
->     if (empty($commandName)) {
->         throw new \InvalidArgumentException('Argument "$commandName" must be not empty');
->     }
->
->     switch ($commandName) {
->         case self::FIRST_COMMAND:
->             $this->firstCommand();
->
->             break;
->         case self::SECOND_COMMAND:
->             $this->secondCommand();
->
->             break;
->         default:
->             throw new \DomainException(sprintf('Unknown command: "%s"', $commandName));
->     }
-> }
-> ```
+
+```php
+// Для данного метода ДОЛЖНО быть 3 теста.
+// 1. Число $number кратно $divider, что бы проверить корректность преобразование типа. Например `divide(4, 2);`.
+// 2. Число $number не кратно $divider. Например `divide(1, 2);`.
+// 3. Число $number не кратно $divider. Например `divide(3, 0);`.
+public function divide(int $number, int $divider): float.
+{
+    if ($divider === 0) {
+        throw new \InvalidArgumentException('Argument "$divider" must be not zero');
+    }
+
+    return (float) $number / $divider;
+}
+
+// Для данного метода ДОЛЖНО быть 4 теста.
+// 1. Название команды соответствует `self::FIRST_COMMAND`.
+// 2. Название команды соответствует `self::SECOND_COMMAND`.
+// 3. Название команды - пустая строка.
+// 4. Команда не найдена.
+public function execute(string $commandName): void
+{
+    if (empty($commandName)) {
+        throw new \InvalidArgumentException('Argument "$commandName" must be not empty');
+    }
+
+    switch ($commandName) {
+        case self::FIRST_COMMAND:
+            $this->firstCommand();
+
+            break;
+        case self::SECOND_COMMAND:
+            $this->secondCommand();
+
+            break;
+        default:
+            throw new \DomainException(sprintf('Unknown command: "%s"', $commandName));
+    }
+}
+```
 
 ### 7.2. Стратегия тестирования
 
@@ -923,314 +923,315 @@
 ## 8. PHPUnit
 
 > Пример:
->
-> Service/UserRegistrator.php
-> ```php
-> <?php
->
-> declare(strict_types = 1);
->
-> namespace Vendor\Project\Service;
->
-> use Doctrine\ORM\EntityManagerInterface;
-> use Psr\Log\LoggerInterface;
-> use Symfony\Component\Security\Core\Encoder\PasswordEncoderInterface;
-> use Symfony\Component\Security\Core\User\User;
-> use Symfony\Component\Security\Core\User\UserInterface;
->
-> class UserRegistrator
-> {
->     /** @var PasswordEncoderInterface */
->     private $passwordEncoder;
->
->     /** @var LoggerInterface */
->     private $logger;
->
->     /** @var string */
->     private $salt;
->
->     public function __construct(PasswordEncoderInterface $passwordEncoder, LoggerInterface $logger, string $salt)
->     {
->         if (empty($salt)) {
->             throw new \InvalidArgumentException('Variable "$salt" must be not empty');
->         }
->
->         $this->passwordEncoder = $passwordEncoder;
->         $this->logger          = $logger;
->         $this->salt            = $salt;
->     }
->
->     public function register(EntityManagerInterface $entityManager, string $userName, string $password): UserInterface
->     {
->         if (preg_match('/^[a-z][a-z0-9_]{5,254}$/i', $userName)) {
->             throw new \InvalidArgumentException(
->                 sprintf('Variable "$userName" is invalid, actual value: "%s"', $userName)
->             );
->         } elseif (empty($password)) {
->             throw new \InvalidArgumentException('Variable "$password" must be not empty');
->         }
->
->         $this->logger->info(sprintf('Register user: "%s"', $userName));
->
->         try {
->             $encodedPassword = $this->passwordEncoder->encodePassword($password, $this->salt);
->             $user            = new User($userName, $encodedPassword);
->
->             $entityManager->persist($user);
->             $entityManager->flush();
->
->             return $user;
->         } catch (\Throwable $exception) {
->             $this->logger->error($exception->getMessage(), ['exception' => $exception]);
->
->             throw $exception;
->         }
->     }
-> }
->
-> ```
->
-> Tests/Service/UserRegistratorTest.php
-> ```php
-> <?php
->
-> declare(strict_types = 1);
->
-> namespace Vendor\Project\Tests\Service;
->
-> use Doctrine\ORM\EntityManagerInterface;
-> use PHPUnit\Framework\MockObject\MockObject;
-> use PHPUnit\Framework\TestCase;
-> use Psr\Log\LoggerInterface;
-> use Symfony\Component\Security\Core\Encoder\PasswordEncoderInterface;
-> use Symfony\Component\Security\Core\User\UserInterface;
-> use Vendor\Project\Service\UserRegistrator;
->
-> class UserRegistratorTest extends TestCase
-> {
->     public function testConstructorWithEmptySalt(): void
->     {
->         $this->expectException(\InvalidArgumentException::class);
->         $this->expectExceptionMessage('Variable "$salt" must be not empty');
->
->         $salt = '';
->
->         /** @var PasswordEncoderInterface|MockObject $passwordEncoder */
->         $passwordEncoder = $this->createMock(PasswordEncoderInterface::class);
->         /** @var LoggerInterface|MockObject $logger */
->         $logger = $this->createMock(LoggerInterface::class);
->
->         new UserRegistrator($passwordEncoder, $logger, $salt);
->     }
->
->     public function testRegister(): void
->     {
->         $salt            = 'salt';
->         $userName        = 'userName';
->         $password        = 'password';
->         $encodedPassword = 'encodedPassword';
->
->         /** @var PasswordEncoderInterface|MockObject $passwordEncoder */
->         $passwordEncoder = $this->createMock(PasswordEncoderInterface::class);
->         /** @var LoggerInterface|MockObject $logger */
->         $logger = $this->createMock(LoggerInterface::class);
->
->         /** @var EntityManagerInterface|MockObject $entityManager */
->         $entityManager = $this->createMock(EntityManagerInterface::class);
->
->         $userRegistrator = new UserRegistrator($passwordEncoder, $logger, $salt);
->
->         $entityManagerIncrement = 0;
->
->         $logger
->             ->expects($this->once())
->             ->method('info')
->             ->with(sprintf('Register user: "%s"', $userName));
->
->         $passwordEncoder
->             ->expects($this->once())
->             ->method('encodePassword')
->             ->with($password, $salt)
->             ->willReturn($encodedPassword);
->
->         $entityManager
->             ->expects($this->at($entityManagerIncrement++))
->             ->method('persist')
->             ->with(
->                 $this->callback(
->                     function (UserInterface $user) use ($encodedPassword, $userName): bool {
->                         $this->assertSame($userName, $user->getUsername());
->                         $this->assertSame($encodedPassword, $user->getPassword());
->
->                         return true;
->                     }
->                 )
->             );
->
->         /** @noinspection PhpUnusedLocalVariableInspection */
->         $entityManager
->             ->expects($this->at($entityManagerIncrement++))
->             ->method('flush');
->
->         $logger
->             ->expects($this->never())
->             ->method('error');
->
->         $user = $userRegistrator->register($entityManager, $userName, $password);
->
->         $this->assertSame($userName, $user->getUsername());
->         $this->assertSame($encodedPassword, $user->getPassword());
->     }
->
->     public function testRegisterWithInvalidUserName(): void
->     {
->         $this->expectException(\InvalidArgumentException::class);
->         $this->expectExceptionMessage('Variable "$userName" is invalid, actual value: "*"');
->
->         $salt     = 'salt';
->         $userName = '*';
->         $password = 'password';
->
->         /** @var PasswordEncoderInterface|MockObject $passwordEncoder */
->         $passwordEncoder = $this->createMock(PasswordEncoderInterface::class);
->         /** @var LoggerInterface|MockObject $logger */
->         $logger = $this->createMock(LoggerInterface::class);
->
->         /** @var EntityManagerInterface|MockObject $entityManager */
->         $entityManager = $this->createMock(EntityManagerInterface::class);
->
->         $userRegistrator = new UserRegistrator($passwordEncoder, $logger, $salt);
->
->         $logger
->             ->expects($this->never())
->             ->method('info');
->
->         $passwordEncoder
->             ->expects($this->never())
->             ->method('encodePassword');
->
->         $entityManager
->             ->expects($this->never())
->             ->method('persist');
->
->         $entityManager
->             ->expects($this->never())
->             ->method('flush');
->
->         $logger
->             ->expects($this->never())
->             ->method('error');
->
->         $userRegistrator->register($entityManager, $userName, $password);
->     }
->
->     public function testRegisterWithInvalidPassword(): void
->     {
->         $this->expectException(\InvalidArgumentException::class);
->         $this->expectExceptionMessage('Variable "$password" must be not empty');
->
->         $salt     = 'salt';
->         $userName = 'userName';
->         $password = '';
->
->         /** @var PasswordEncoderInterface|MockObject $passwordEncoder */
->         $passwordEncoder = $this->createMock(PasswordEncoderInterface::class);
->         /** @var LoggerInterface|MockObject $logger */
->         $logger = $this->createMock(LoggerInterface::class);
->
->         /** @var EntityManagerInterface|MockObject $entityManager */
->         $entityManager = $this->createMock(EntityManagerInterface::class);
->
->         $userRegistrator = new UserRegistrator($passwordEncoder, $logger, $salt);
->
->         $logger
->             ->expects($this->never())
->             ->method('info');
->
->         $passwordEncoder
->             ->expects($this->never())
->             ->method('encodePassword');
->
->         $entityManager
->             ->expects($this->never())
->             ->method('persist');
->
->         $entityManager
->             ->expects($this->never())
->             ->method('flush');
->
->         $logger
->             ->expects($this->never())
->             ->method('error');
->
->         $userRegistrator->register($entityManager, $userName, $password);
->     }
->
->     public function testRegisterWithUnexpectedDbException(): void
->     {
->         $this->expectException(\Exception::class);
->         $this->expectExceptionMessage('UnexpectedException');
->
->         $salt            = 'salt';
->         $userName        = 'userName';
->         $password        = 'password';
->         $encodedPassword = 'encodedPassword';
->         $exception       = new \Exception('UnexpectedException');
->         $logContext      = ['exception' => $exception];
->
->         /** @var PasswordEncoderInterface|MockObject $passwordEncoder */
->         $passwordEncoder = $this->createMock(PasswordEncoderInterface::class);
->         /** @var LoggerInterface|MockObject $logger */
->         $logger = $this->createMock(LoggerInterface::class);
->
->         /** @var EntityManagerInterface|MockObject $entityManager */
->         $entityManager = $this->createMock(EntityManagerInterface::class);
->
->         $userRegistrator = new UserRegistrator($passwordEncoder, $logger, $salt);
->
->         $entityManagerIncrement = 0;
->
->         $logger
->             ->expects($this->once())
->             ->method('info')
->             ->with(sprintf('Register user: "%s"', $userName));
->
->         $passwordEncoder
->             ->expects($this->once())
->             ->method('encodePassword')
->             ->with($password, $salt)
->             ->willReturn($encodedPassword);
->
->         $entityManager
->             ->expects($this->at($entityManagerIncrement++))
->             ->method('persist')
->             ->with(
->                 $this->callback(
->                     function (UserInterface $user) use ($encodedPassword, $userName): bool {
->                         $this->assertSame($userName, $user->getUsername());
->                         $this->assertSame($encodedPassword, $user->getPassword());
->
->                         return true;
->                     }
->                 )
->             );
->
->         /** @noinspection PhpUnusedLocalVariableInspection */
->         $entityManager
->             ->expects($this->at($entityManagerIncrement++))
->             ->method('flush')
->             ->willThrowException($exception);
->
->         $logger
->             ->expects($this->once())
->             ->method('error')
->             ->with($exception->getMessage(), $logContext);
->
->         $userRegistrator->register($entityManager, $userName, $password);
->     }
-> }
->
-> ```
+> Service/UserRegistrator.php 
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Vendor\Project\Service;
+
+use Doctrine\ORM\EntityManagerInterface;
+use Psr\Log\LoggerInterface;
+use Symfony\Component\Security\Core\Encoder\PasswordEncoderInterface;
+use Symfony\Component\Security\Core\User\User;
+use Symfony\Component\Security\Core\User\UserInterface;
+
+class UserRegistrator
+{
+    /** @var PasswordEncoderInterface */
+    private $passwordEncoder;
+
+    /** @var LoggerInterface */
+    private $logger;
+
+    /** @var string */
+    private $salt;
+
+    public function __construct(PasswordEncoderInterface $passwordEncoder, LoggerInterface $logger, string $salt)
+    {
+        if (empty($salt)) {
+            throw new \InvalidArgumentException('Variable "$salt" must be not empty');
+        }
+
+        $this->passwordEncoder = $passwordEncoder;
+        $this->logger          = $logger;
+        $this->salt            = $salt;
+    }
+
+    public function register(EntityManagerInterface $entityManager, string $userName, string $password): UserInterface
+    {
+        if (preg_match('/^[a-z][a-z0-9_]{5,254}$/i', $userName)) {
+            throw new \InvalidArgumentException(
+                sprintf('Variable "$userName" is invalid, actual value: "%s"', $userName)
+            );
+        } elseif (empty($password)) {
+            throw new \InvalidArgumentException('Variable "$password" must be not empty');
+        }
+
+        $this->logger->info(sprintf('Register user: "%s"', $userName));
+
+        try {
+            $encodedPassword = $this->passwordEncoder->encodePassword($password, $this->salt);
+            $user            = new User($userName, $encodedPassword);
+
+            $entityManager->persist($user);
+            $entityManager->flush();
+
+            return $user;
+        } catch (\Throwable $exception) {
+            $this->logger->error($exception->getMessage(), ['exception' => $exception]);
+
+            throw $exception;
+        }
+    }
+}
+
+```
+
+> Tests/Service/UserRegistratorTest.php    
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Vendor\Project\Tests\Service;
+
+use Doctrine\ORM\EntityManagerInterface;
+use PHPUnit\Framework\MockObject\MockObject;
+use PHPUnit\Framework\TestCase;
+use Psr\Log\LoggerInterface;
+use Symfony\Component\Security\Core\Encoder\PasswordEncoderInterface;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Vendor\Project\Service\UserRegistrator;
+
+class UserRegistratorTest extends TestCase
+{
+    public function testConstructorWithEmptySalt(): void
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage('Variable "$salt" must be not empty');
+
+        $salt = '';
+
+        /** @var PasswordEncoderInterface|MockObject $passwordEncoder */
+        $passwordEncoder = $this->createMock(PasswordEncoderInterface::class);
+        /** @var LoggerInterface|MockObject $logger */
+        $logger = $this->createMock(LoggerInterface::class);
+
+        new UserRegistrator($passwordEncoder, $logger, $salt);
+    }
+
+    public function testRegister(): void
+    {
+        $salt            = 'salt';
+        $userName        = 'userName';
+        $password        = 'password';
+        $encodedPassword = 'encodedPassword';
+
+        /** @var PasswordEncoderInterface|MockObject $passwordEncoder */
+        $passwordEncoder = $this->createMock(PasswordEncoderInterface::class);
+        /** @var LoggerInterface|MockObject $logger */
+        $logger = $this->createMock(LoggerInterface::class);
+
+        /** @var EntityManagerInterface|MockObject $entityManager */
+        $entityManager = $this->createMock(EntityManagerInterface::class);
+
+        $userRegistrator = new UserRegistrator($passwordEncoder, $logger, $salt);
+
+        $entityManagerIncrement = 0;
+
+        $logger
+            ->expects($this->once())
+            ->method('info')
+            ->with(sprintf('Register user: "%s"', $userName));
+
+        $passwordEncoder
+            ->expects($this->once())
+            ->method('encodePassword')
+            ->with($password, $salt)
+            ->willReturn($encodedPassword);
+
+        $entityManager
+            ->expects($this->at($entityManagerIncrement++))
+            ->method('persist')
+            ->with(
+                $this->callback(
+                    function (UserInterface $user) use ($encodedPassword, $userName): bool {
+                        $this->assertSame($userName, $user->getUsername());
+                        $this->assertSame($encodedPassword, $user->getPassword());
+
+                        return true;
+                    }
+                )
+            );
+
+        /** @noinspection PhpUnusedLocalVariableInspection */
+        $entityManager
+            ->expects($this->at($entityManagerIncrement++))
+            ->method('flush');
+
+        $logger
+            ->expects($this->never())
+            ->method('error');
+
+        $user = $userRegistrator->register($entityManager, $userName, $password);
+
+        $this->assertSame($userName, $user->getUsername());
+        $this->assertSame($encodedPassword, $user->getPassword());
+    }
+
+    public function testRegisterWithInvalidUserName(): void
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage('Variable "$userName" is invalid, actual value: "*"');
+
+        $salt     = 'salt';
+        $userName = '*';
+        $password = 'password';
+
+        /** @var PasswordEncoderInterface|MockObject $passwordEncoder */
+        $passwordEncoder = $this->createMock(PasswordEncoderInterface::class);
+        /** @var LoggerInterface|MockObject $logger */
+        $logger = $this->createMock(LoggerInterface::class);
+
+        /** @var EntityManagerInterface|MockObject $entityManager */
+        $entityManager = $this->createMock(EntityManagerInterface::class);
+
+        $userRegistrator = new UserRegistrator($passwordEncoder, $logger, $salt);
+
+        $logger
+            ->expects($this->never())
+            ->method('info');
+
+        $passwordEncoder
+            ->expects($this->never())
+            ->method('encodePassword');
+
+        $entityManager
+            ->expects($this->never())
+            ->method('persist');
+
+        $entityManager
+            ->expects($this->never())
+            ->method('flush');
+
+        $logger
+            ->expects($this->never())
+            ->method('error');
+
+        $userRegistrator->register($entityManager, $userName, $password);
+    }
+
+    public function testRegisterWithInvalidPassword(): void
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage('Variable "$password" must be not empty');
+
+        $salt     = 'salt';
+        $userName = 'userName';
+        $password = '';
+
+        /** @var PasswordEncoderInterface|MockObject $passwordEncoder */
+        $passwordEncoder = $this->createMock(PasswordEncoderInterface::class);
+        /** @var LoggerInterface|MockObject $logger */
+        $logger = $this->createMock(LoggerInterface::class);
+
+        /** @var EntityManagerInterface|MockObject $entityManager */
+        $entityManager = $this->createMock(EntityManagerInterface::class);
+
+        $userRegistrator = new UserRegistrator($passwordEncoder, $logger, $salt);
+
+        $logger
+            ->expects($this->never())
+            ->method('info');
+
+        $passwordEncoder
+            ->expects($this->never())
+            ->method('encodePassword');
+
+        $entityManager
+            ->expects($this->never())
+            ->method('persist');
+
+        $entityManager
+            ->expects($this->never())
+            ->method('flush');
+
+        $logger
+            ->expects($this->never())
+            ->method('error');
+
+        $userRegistrator->register($entityManager, $userName, $password);
+    }
+
+    public function testRegisterWithUnexpectedDbException(): void
+    {
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage('UnexpectedException');
+
+        $salt            = 'salt';
+        $userName        = 'userName';
+        $password        = 'password';
+        $encodedPassword = 'encodedPassword';
+        $exception       = new \Exception('UnexpectedException');
+        $logContext      = ['exception' => $exception];
+
+        /** @var PasswordEncoderInterface|MockObject $passwordEncoder */
+        $passwordEncoder = $this->createMock(PasswordEncoderInterface::class);
+        /** @var LoggerInterface|MockObject $logger */
+        $logger = $this->createMock(LoggerInterface::class);
+
+        /** @var EntityManagerInterface|MockObject $entityManager */
+        $entityManager = $this->createMock(EntityManagerInterface::class);
+
+        $userRegistrator = new UserRegistrator($passwordEncoder, $logger, $salt);
+
+        $entityManagerIncrement = 0;
+
+        $logger
+            ->expects($this->once())
+            ->method('info')
+            ->with(sprintf('Register user: "%s"', $userName));
+
+        $passwordEncoder
+            ->expects($this->once())
+            ->method('encodePassword')
+            ->with($password, $salt)
+            ->willReturn($encodedPassword);
+
+        $entityManager
+            ->expects($this->at($entityManagerIncrement++))
+            ->method('persist')
+            ->with(
+                $this->callback(
+                    function (UserInterface $user) use ($encodedPassword, $userName): bool {
+                        $this->assertSame($userName, $user->getUsername());
+                        $this->assertSame($encodedPassword, $user->getPassword());
+
+                        return true;
+                    }
+                )
+            );
+
+        /** @noinspection PhpUnusedLocalVariableInspection */
+        $entityManager
+            ->expects($this->at($entityManagerIncrement++))
+            ->method('flush')
+            ->willThrowException($exception);
+
+        $logger
+            ->expects($this->once())
+            ->method('error')
+            ->with($exception->getMessage(), $logContext);
+
+        $userRegistrator->register($entityManager, $userName, $password);
+    }
+}
+
+```
 
 ### 8.1. Именование тестовых классов
 
@@ -1244,16 +1245,16 @@
 Множество дополнительных аспектов разделяется с помощью строки `And`.
 
 > Пример:
->
-> ```php
-> public function testLogMessage(): void
-> // ...
-> public function testLogMessageWithEmptyMessage(): void
-> // ...
-> public function testLogMessageWithEmptyMessageAndEmtyContext(): void
-> // ...
-> public function testLogMessageWithInvalidContext(): void
-> ```
+
+```php
+public function testLogMessage(): void
+// ...
+public function testLogMessageWithEmptyMessage(): void
+// ...
+public function testLogMessageWithEmptyMessageAndEmtyContext(): void
+// ...
+public function testLogMessageWithInvalidContext(): void
+```
 
 ### 8.2. Структура теста
 
@@ -1291,6 +1292,15 @@ Mock-объект ДОЛЖЕН быть объявлен, согласно сл�
 mock-интерфейс.
 3. Mock-объект ДОЛЖЕН присваиваться переменной тестового метода.
 
+> Пример:
+
+```php
+/** @var PasswordEncoderInterface|MockObject $passwordEncoder */
+$passwordEncoder = $this->createMock(PasswordEncoderInterface::class);
+/** @var LoggerInterface|MockObject $logger */
+$logger = $this->createMock(LoggerInterface::class);
+```
+
 ### 8.5. Инкременты вызовов mock-объектов
 
 Инкременты вызовов mock-объектов - это переменные типа `int`, со значением 0.
@@ -1307,7 +1317,7 @@ mock-интерфейс.
 >
 > ```php
 > $mockObject
->     ->expects($expects)
+>     ->expects($this->never())
 >     ->method('methodName');
 > ```
 
