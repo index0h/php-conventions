@@ -1,0 +1,38 @@
+*.php text eol=lf
+*.js  text eol=lf
+*.sh  text eol=lf
+*.sql text eol=lf
+
+*.svg text eol=lf
+*.pug text eol=lf
+
+*.json text eol=lf
+
+*.yaml     text eol=lf
+*.yml      text eol=lf
+*.yml.dist text eol=lf
+
+*.xml      text eol=lf
+*.xml.dist text eol=lf
+
+*.css  text eol=lf
+*.less text eol=lf
+
+*.jade text eol=lf
+*.twig text eol=lf
+
+composer.lock text eol=lf
+
+.htaccess text eol=lf
+.bowerrc  text eol=lf
+.jshintrc text eol=lf
+
+*.j2   text eol=lf
+*.conf text eol=lf
+*.md   text eol=lf
+
+.bashrc       text eol=lf
+.bash_git     text eol=lf
+.screenrc     text eol=lf
+.bash_aliases text eol=lf
+.vimrc        text eol=lf

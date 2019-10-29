@@ -1,0 +1,270 @@
+<profile version="1.0">
+  <option name="myName" value="php-conventions" />
+  <inspection_tool class="AnnotationDeprecatedInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="AnnotationMissingUseInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="DuplicatedCode" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+  <inspection_tool class="InconsistentLineSeparators" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="LongLine" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpAbstractStaticMethodInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpAssignmentInConditionInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpAssignmentReplaceableWithOperatorAssignmentInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpAssignmentReplaceableWithPrefixExpressionInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpCSValidationInspection" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="CODING_STANDARD" value="PSR2" />
+    <option name="WARNING_HIGHLIGHT_LEVEL_NAME" value="WARNING" />
+    <option name="EXTENSIONS" value="php,js,css,inc" />
+  </inspection_tool>
+  <inspection_tool class="PhpClassNamingConventionInspection" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="m_regex" value="[A-Z][A-Za-z\d]+" />
+    <option name="m_minLength" value="2" />
+    <option name="m_maxLength" value="80" />
+  </inspection_tool>
+  <inspection_tool class="PhpComposerExtensionStubsInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+  <inspection_tool class="PhpConstantNamingConventionInspection" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="m_regex" value="[A-Z][A-Z_\d]+" />
+    <option name="m_minLength" value="2" />
+    <option name="m_maxLength" value="80" />
+  </inspection_tool>
+  <inspection_tool class="PhpConstantReassignmentInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpConstructorStyleInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpDeprecationInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpDisabledExtensionStubsInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpDivisionByZeroInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpDocFieldTypeMismatchInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpDocMissingReturnTagInspection" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="SKIP_ON_PRESENT_TYPE_HINT" value="true" />
+  </inspection_tool>
+  <inspection_tool class="PhpDocMissingThrowsInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpDocRedundantThrowsInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpDocSignatureInspection" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="ALLOW_MISSING_PARAMETERS" value="true" />
+  </inspection_tool>
+  <inspection_tool class="PhpDuplicateArrayKeysInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpDuplicateCaseInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpDuplicateSwitchCaseBodyInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+  <inspection_tool class="PhpDynamicAsStaticMethodCallInspection" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="MAGIC_HIGHLIGHT_LEVEL_NAME" value="WARNING" />
+  </inspection_tool>
+  <inspection_tool class="PhpExpressionResultUnusedInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpFieldAssignmentTypeMismatchInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpForeachArrayIsUsedAsValueInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpForeachNestedOuterKeyValueVariablesConflictInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpFormatFunctionParametersMismatchInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpFullyQualifiedNameUsageInspection" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="IGNORE_GLOBAL_NAMESPACE" value="true" />
+  </inspection_tool>
+  <inspection_tool class="PhpFunctionNamingConventionInspection" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="m_regex" value="[a-z][_a-z\d]+" />
+    <option name="m_minLength" value="2" />
+    <option name="m_maxLength" value="80" />
+  </inspection_tool>
+  <inspection_tool class="PhpIgnoredClassAliasDeclaration" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpIllegalArrayKeyTypeInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpIllegalPsrClassPathInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+  <inspection_tool class="PhpIllegalStringOffsetInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpIncludeInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpIncompatibleReturnTypeInspection" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="STRICT_TYPE_CHECKING" value="true" />
+  </inspection_tool>
+  <inspection_tool class="PhpInconsistentReturnPointsInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpInternalEntityUsedInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpInvalidMagicMethodModifiersInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpMethodMayBeStaticInspection" enabled="false" level="INFORMATION" enabled_by_default="false" />
+  <inspection_tool class="PhpMethodNamingConventionInspection" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="m_minLength" value="1" />
+    <option name="m_maxLength" value="80" />
+  </inspection_tool>
+  <inspection_tool class="PhpMethodOrClassCallIsNotCaseSensitiveInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpMethodParametersCountMismatchInspection" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="DISABLE_FOR__PARAMETER" value="false" />
+  </inspection_tool>
+  <inspection_tool class="PhpMissingDocCommentInspection" enabled="false" level="WARNING" enabled_by_default="false">
+    <option name="CHECK_FIELD" value="true" />
+  </inspection_tool>
+  <inspection_tool class="PhpMissingFieldTypeInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpMissingParentConstructorInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpMissingStrictTypesDeclarationInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpMultipleClassesDeclarationsInOneFile" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpNonCanonicalElementsOrderInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpNonCompoundUseInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpNonStrictObjectEqualityInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpOptionalBeforeRequiredParametersInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpParamsInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpPropertyNamingConventionInspection" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="m_minLength" value="1" />
+    <option name="m_maxLength" value="80" />
+  </inspection_tool>
+  <inspection_tool class="PhpRedundantCatchClauseInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpRedundantClosingTagInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpShortOpenTagInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpSignatureMismatchDuringInheritanceInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpSillyAssignmentInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpStatementHasEmptyBodyInspection" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="myCommentsCountAsContent" value="true" />
+  </inspection_tool>
+  <inspection_tool class="PhpStaticAsDynamicMethodCallInspection" enabled="false" level="WARNING" enabled_by_default="false">
+    <option name="MAGIC_HIGHLIGHT_LEVEL_NAME" value="WARNING" />
+  </inspection_tool>
+  <inspection_tool class="PhpSwitchCaseWithoutDefaultBranchInspection" enabled="false" level="INFORMATION" enabled_by_default="false" />
+  <inspection_tool class="PhpToStringImplementationInspection" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="STRICT_MODE" value="true" />
+  </inspection_tool>
+  <inspection_tool class="PhpTraditionalSyntaxArrayLiteralInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpUndefinedClassConstantInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpUndefinedClassInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpUndefinedConstantInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpUndefinedFieldInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpUndefinedFunctionInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpUndefinedGotoLabelInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpUndefinedMethodInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpUndefinedNamespaceInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpUnhandledExceptionInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+  <inspection_tool class="PhpUnnecessaryFullyQualifiedNameInspection" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="IGNORE_GLOBAL_NAMESPACE" value="true" />
+  </inspection_tool>
+  <inspection_tool class="PhpUnnecessaryParenthesesInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpUnpackedArrayArgumentTypeMismatchInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpUnreachableStatementInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpUnused" enabled="true" level="WARNING" enabled_by_default="true" field_visibility="private" method_visibility="private" const_visibility="private">
+    <option name="SUPPRESS_GETTERS_AND_SETTERS" value="true" />
+    <option name="CLASS" value="false" />
+    <option name="FUNCTION" value="false" />
+    <option name="MAGIC_METHOD" value="false" />
+  </inspection_tool>
+  <inspection_tool class="PhpUnusedAliasInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpUnusedLocalVariableInspection" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="DONT_REPORT_ASSIGNMENT_TO_NULL" value="false" />
+  </inspection_tool>
+  <inspection_tool class="PhpUnusedParameterInspection" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="DONT_REPORT_ABSTRACT_CLASS" value="true" />
+    <option name="DONT_REPORT_ANONYMOUS" value="true" />
+  </inspection_tool>
+  <inspection_tool class="PhpUnusedPrivateFieldInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpUnusedPrivateMethodInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpUsageOfSilenceOperatorInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpVariableNamingConventionInspection" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="m_regex" value="[a-z][A-Za-z\d]*" />
+    <option name="m_minLength" value="1" />
+    <option name="m_maxLength" value="80" />
+  </inspection_tool>
+  <inspection_tool class="PhpVariableVariableInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpVoidFunctionResultUsedInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpWrongCatchClausesOrderInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpWrongForeachArgumentTypeInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PhpWrongStringConcatenationInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="ProblematicWhitespace" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="RedundantSuppression" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="RepositoryClassInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="SSBasedInspection" enabled="true" level="WARNING" enabled_by_default="true">
+    <searchConfiguration name="Public fields not allowed" text="class $a$ {public $b$;}" recursive="false" caseInsensitive="true" type="PHP">
+      <constraint name="__context__" within="" contains="" />
+      <constraint name="a" within="" contains="" />
+      <constraint name="b" maxCount="2147483647" target="true" within="" contains="" />
+    </searchConfiguration>
+    <searchConfiguration name="Public static fields not allowed" text="class $a$ {public static $b$;}" recursive="false" caseInsensitive="true" type="PHP">
+      <constraint name="__context__" within="" contains="" />
+      <constraint name="a" within="" contains="" />
+      <constraint name="b" maxCount="2147483647" target="true" within="" contains="" />
+    </searchConfiguration>
+    <searchConfiguration name="Protected static fields not allowed" text="class $a$ {protected static $b$;}" recursive="false" caseInsensitive="true" type="PHP">
+      <constraint name="__context__" within="" contains="" />
+      <constraint name="a" within="" contains="" />
+      <constraint name="b" maxCount="2147483647" target="true" within="" contains="" />
+    </searchConfiguration>
+    <searchConfiguration name="Private static fields not allowed" text="class $a$ {private static $b$;}" recursive="false" caseInsensitive="true" type="PHP">
+      <constraint name="__context__" within="" contains="" />
+      <constraint name="a" within="" contains="" />
+      <constraint name="b" maxCount="2147483647" target="true" within="" contains="" />
+    </searchConfiguration>
+    <searchConfiguration name="This public method not allowed" text="class $a$ {public function $b$()}" recursive="false" caseInsensitive="true" type="PHP">
+      <constraint name="__context__" within="" contains="" />
+      <constraint name="a" within="" contains="" />
+      <constraint name="b" regexp="^(__get|__set|__call)$" maxCount="2147483647" target="true" within="" contains="" />
+    </searchConfiguration>
+    <searchConfiguration name="This final public method not allowed" text="class $a$ {final public function $b$()}" recursive="true" caseInsensitive="true" type="PHP">
+      <constraint name="__context__" within="" contains="" />
+      <constraint name="a" within="" contains="" />
+      <constraint name="b" regexp="^(__get|__set|__call)$" maxCount="2147483647" target="true" within="" contains="" />
+    </searchConfiguration>
+    <searchConfiguration name="This abstract public method not allowed" text="class $a$ {abstract public function $b$()}" recursive="true" caseInsensitive="true" type="PHP">
+      <constraint name="__context__" within="" contains="" />
+      <constraint name="a" within="" contains="" />
+      <constraint name="b" regexp="^(__get|__set|__call)$" maxCount="2147483647" target="true" within="" contains="" />
+    </searchConfiguration>
+    <searchConfiguration name="Public static methods not allowed" text="class $a$ {public static function $b$()}" recursive="true" caseInsensitive="true" type="PHP">
+      <constraint name="__context__" within="" contains="" />
+      <constraint name="a" within="" contains="" />
+      <constraint name="b" maxCount="2147483647" target="true" within="" contains="" />
+    </searchConfiguration>
+    <searchConfiguration name="Final public static methods not allowed" text="class $a$ {final public static function $b$()}" recursive="true" caseInsensitive="true" type="PHP">
+      <constraint name="__context__" within="" contains="" />
+      <constraint name="a" within="" contains="" />
+      <constraint name="b" maxCount="2147483647" target="true" within="" contains="" />
+    </searchConfiguration>
+    <searchConfiguration name="Abstract public static methods not allowed" text="class $a$ {abstract public static function $b$()}" recursive="true" caseInsensitive="true" type="PHP">
+      <constraint name="__context__" within="" contains="" />
+      <constraint name="a" within="" contains="" />
+      <constraint name="b" maxCount="2147483647" target="true" within="" contains="" />
+    </searchConfiguration>
+    <searchConfiguration name="This protected method not allowed" text="class $a$ {protected function $b$()}" recursive="false" caseInsensitive="true" type="PHP">
+      <constraint name="__context__" within="" contains="" />
+      <constraint name="a" within="" contains="" />
+      <constraint name="b" regexp="^(__get|__set|__call)$" maxCount="2147483647" target="true" within="" contains="" />
+    </searchConfiguration>
+    <searchConfiguration name="This final protected method not allowed" text="class $a$ {final protected function $b$()}" recursive="true" caseInsensitive="true" type="PHP">
+      <constraint name="__context__" within="" contains="" />
+      <constraint name="a" within="" contains="" />
+      <constraint name="b" regexp="^(__get|__set|__call)$" maxCount="2147483647" target="true" within="" contains="" />
+    </searchConfiguration>
+    <searchConfiguration name="This abstract protected method not allowed" text="class $a$ {abstract protected function $b$()}" recursive="true" caseInsensitive="true" type="PHP">
+      <constraint name="__context__" within="" contains="" />
+      <constraint name="a" within="" contains="" />
+      <constraint name="b" regexp="^(__get|__set|__call)$" maxCount="2147483647" target="true" within="" contains="" />
+    </searchConfiguration>
+    <searchConfiguration name="Protected static methods not allowed" text="class $a$ {protected static function $b$()}" recursive="true" caseInsensitive="true" type="PHP">
+      <constraint name="__context__" within="" contains="" />
+      <constraint name="a" within="" contains="" />
+      <constraint name="b" maxCount="2147483647" target="true" within="" contains="" />
+    </searchConfiguration>
+    <searchConfiguration name="Final protected static methods not allowed" text="class $a$ {final protected static function $b$()}" recursive="true" caseInsensitive="true" type="PHP">
+      <constraint name="__context__" within="" contains="" />
+      <constraint name="a" within="" contains="" />
+      <constraint name="b" maxCount="2147483647" target="true" within="" contains="" />
+    </searchConfiguration>
+    <searchConfiguration name="Abstract protected static methods not allowed" text="class $a$ {abstract protected static function $b$()}" recursive="true" caseInsensitive="true" type="PHP">
+      <constraint name="__context__" within="" contains="" />
+      <constraint name="a" within="" contains="" />
+      <constraint name="b" maxCount="2147483647" target="true" within="" contains="" />
+    </searchConfiguration>
+    <searchConfiguration name="This private method not allowed" text="class $a$ {private function $b$()}" recursive="false" caseInsensitive="true" type="PHP">
+      <constraint name="__context__" within="" contains="" />
+      <constraint name="a" within="" contains="" />
+      <constraint name="b" regexp="^(__get|__set|__call)$" maxCount="2147483647" target="true" within="" contains="" />
+    </searchConfiguration>
+    <searchConfiguration name="This final private method not allowed" text="class $a$ {final private function $b$()}" recursive="true" caseInsensitive="true" type="PHP">
+      <constraint name="__context__" within="" contains="" />
+      <constraint name="a" within="" contains="" />
+      <constraint name="b" regexp="^(__get|__set|__call)$" maxCount="2147483647" target="true" within="" contains="" />
+    </searchConfiguration>
+    <searchConfiguration name="This abstract private method not allowed" text="class $a$ {abstract private function $b$()}" recursive="true" caseInsensitive="true" type="PHP">
+      <constraint name="__context__" within="" contains="" />
+      <constraint name="a" within="" contains="" />
+      <constraint name="b" regexp="^(__get|__set|__call)$" maxCount="2147483647" target="true" within="" contains="" />
+    </searchConfiguration>
+    <searchConfiguration name="Private static methods not allowed" text="class $a$ {private static function $b$()}" recursive="true" caseInsensitive="true" type="PHP">
+      <constraint name="__context__" within="" contains="" />
+      <constraint name="a" within="" contains="" />
+      <constraint name="b" maxCount="2147483647" target="true" within="" contains="" />
+    </searchConfiguration>
+    <searchConfiguration name="Final private static methods not allowed" text="class $a$ {final private static function $b$()}" recursive="true" caseInsensitive="true" type="PHP">
+      <constraint name="__context__" within="" contains="" />
+      <constraint name="a" within="" contains="" />
+      <constraint name="b" maxCount="2147483647" target="true" within="" contains="" />
+    </searchConfiguration>
+    <searchConfiguration name="Abstract private static methods not allowed" text="class $a$ {abstract private static function $b$()}" recursive="true" caseInsensitive="true" type="PHP">
+      <constraint name="__context__" within="" contains="" />
+      <constraint name="a" within="" contains="" />
+      <constraint name="b" maxCount="2147483647" target="true" within="" contains="" />
+    </searchConfiguration>
+  </inspection_tool>
+</profile>
