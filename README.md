@@ -750,7 +750,7 @@ $this->{$methodName}($argument);
 
 Каждый аргумент публичного метода, защищенного метода, или функции ДОЛЖЕН быть проверен на корректность типа и граничные
 значения.
-Каждый аргумент првиатного метода ДОЛЖЕН быть проверен на корректность типа, проверять граничные значения РЕКОМЕНДУЕТСЯ.
+Каждый аргумент приватного метода ДОЛЖЕН быть проверен на корректность типа, проверять граничные значения РЕКОМЕНДУЕТСЯ.
 Если аргумент не валиден — штатное выполнение метода (функции) невозможно, по этой причине ДОЛЖНО быть брошено
 исключение.
 
@@ -1367,6 +1367,190 @@ $mockObject
     ->method('methodName')
     ->willThrowException($exception);
 ```
+
+### 8.7 Порядок утверждений для одного значния
+
+В случае когда для проверки одного значения требуется несколько утверждений, эти утверждения ДОЛЖНЫ быть описаны в
+порядке от максимально информативных до минимально информативных, далее от общих к частным.
+
+```php
+// Правильно
+/** @var JsonResponse|Response $response */
+$response = $action->run(/* ... */);
+
+$this->assertSame($expectedContent, $response->getContent());
+$this->assertSame(Response::HTTP_OK, $response->getStatusCode());
+$this->assertInstanceOf(JsonResponse::class, $response);
+```
+
+```php
+// Не правильно
+// В случае возникновения ошибки не будет ясно, что же за ошибка произошла, вместо этого получим только несоответсвие
+// типа $response, или статус кода.
+/** @var JsonResponse|Response $response */
+$response = $action->run(/* ... */);
+
+$this->assertInstanceOf(JsonResponse::class, $response);
+$this->assertSame(Response::HTTP_OK, $response->getStatusCode());
+$this->assertSame($expectedContent, $response->getContent());
+```
+
+```php
+// Правильно
+$exceptionContext = $object->method(/* ... */);
+
+$this->assertIsArray($exceptionContext);
+$this->assertNotEmpty($exceptionContext);
+$this->assertArrayHasKey('exception', $exceptionContext);
+$this->assertInstanceOf(\DomainException::class, $exceptionContext['exception']);
+$this->assertSame($expectedExceptionMessage, $exceptionContext['exception']->getMessage());
+```
+
+```php
+// Не правильно
+$exceptionContext = $object->method(/* ... */);
+
+$this->assertSame($expectedExceptionMessage, $exceptionContext['exception']->getMessage());
+```
+
+### 8.8. Проверка утверждений на основании результатов собственных проверок
+
+Проверка утверждений на основании результатов собственных проверок ДОПУСКАЕТСЯ только в случае, когда отсутвует
+`assert*` метод, включающий эту проверку. Во всех остальных случая НЕОБХОДИМО использовать `assert*` метод.
+
+> Распространенной ошибкой является "ручная" проверка значения и утверждение о ее ложном, или положительном результате.
+> В следствии такого подхода, срабатывание утверждения не покажет информацию о том, что же пошло не так.
+
+```php
+// Правильно
+$this->assertSame($expectedString, $actualString);
+
+// Не правильно
+$this->assertSame(true, $expectedString === $actualString);
+
+// Не правильно
+$this->assertTrue($expectedString === $actualString);
+```
+
+```php
+// Правильно
+$this->assertStringStartsWith($expectedPrefix, $actualString);
+
+// Не правильно
+$this->assertSame(0, strpos($actualString, $expectedPrefix));
+```
+
+```php
+// Правильно
+$this->assertTrue($actualBool);
+
+// Не правильно
+$this->assertTrue($actualBool === true);
+
+// Не правильно
+$this->assertSame(true, $actualBool);
+```
+
+### 8.9. Проверка утверждений на основании `TestCase::callback`
+
+Для проверок утверждений на основании `TestCase::callback` НЕОБХОДИМО использовать утверждения, а не возвращать `false`.
+
+> В случае, когда `TestCase::callback` получает `false`, он теряет информацию о причинах, почему проверка дала ложный
+> результат. Поиск этих причин усложняет процесс отладки. Если же вместо проверок с булевым результатом использовать
+> утверждения - информация о проблеме не будет потеряна.
+
+```php
+// Правильно
+$userRepository
+    ->expects($this->once())
+    ->method('findByGroup')
+    ->with(
+        $this->callback(
+            function (Group $group) use ($groupId, $groupName): bool {
+                $this->assertSame($groupId, $group->getId());
+                $this->assertSame($groupName, $group->getName());
+                
+                return true;
+            }
+        )
+    )
+    ->willReturn($users);
+```
+
+```php
+// Не правильно
+$userRepository
+    ->expects($this->once())
+    ->method('findByGroup')
+    ->with(
+        $this->callback(
+            function (Group $group) use ($groupId, $groupName): bool {
+                // Если следующая проверка не выполнится, в лог будет долбавено сообщение о том, что аргумент не
+                // прошол проверку. Информация о том, какая из частей этой проверки дала ложный результат, и какие
+                // в принципе значения сравнивались будет потеряна.
+                return $group->getId() === $groupId && $group->getName() === $groupName;
+            }
+        )
+    )
+    ->willReturn($users);
+```
+
+### 8.10. Проверка утверждений для числовых значений
+
+Для проверок числовых значений без учета погрешности ДОЛЖЕН использоваться метод `assertSame`.
+
+```php
+// Правильно
+$expected = 5;
+$actual   = 5;
+
+$this->assertSame($expected, $actual);
+```
+
+```php
+// Не правильно
+$expected = 5;
+$actual   = 5;
+
+$this->assertEqual($expected, $actual);
+```
+
+Для проверок числовых значений с учетом погрешности ДОЛЖЕН использоваться метод `assertEqual` с обязательным указанием
+погрешности.
+
+```php
+// Правильно
+$expected = 5;
+$actual   = 4.5;
+
+$this->assertEqual($expected, $actual, '', 1);
+```
+
+### 8.11. Проверка утверждений для \DateTimeImmutable
+
+Проверки объектов \DateTimeImmutable ДОЛЖНЫ осуществляться на основаниии `timestamp`, а не сравнения объектов.
+Для проверок \DateTimeImmutable, не зависящих от текущего времени ДОЛЖЕН использоваться метод `assertSame`.
+
+```php
+$expected = new \DateTimeImmutable('2019-01-01 10:20:30');
+$actual   = new \DateTimeImmutable('2019-01-01 10:20:30');
+
+$this->assertSame($expected->getTimestamp(), $actual->getTimestamp());
+```
+
+Для проверок \DateTimeImmutable зависящих от текущего времени ДОЛЖЕН использоваться метод `assertEqual` с обязательным
+указанием погрешности.
+
+```php
+$expected = new \DateTimeImmutable();
+$actual   = new \DateTimeImmutable();
+
+$this->assertEqual($expected->getTimestamp(), $actual->getTimestamp(), '', 2);
+```
+
+> В случае проверок данных на основании текущего времени высока вероятность ложно позитивных и ложно негативных
+> результатов. Дело в том, что сам процесс выполнения теста требует некоторого времени, как результат это время является
+> неявной и не контролируемой переменной в тесте.
 
 ## 9. IDE
 
