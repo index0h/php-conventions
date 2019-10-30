@@ -1564,4 +1564,3 @@ $this->assertEqual($expected->getTimestamp(), $actual->getTimestamp(), '', 2);
 
 Настройки код стайла РЕКОМЕНДУЕТСЯ [импортировать](https://www.jetbrains.com/help/phpstorm/configuring-code-style.html)
 из `phpstorm/php-conventions-code-style.xml`.
-
