@@ -1402,7 +1402,7 @@ $exceptionContext = $object->method(/* ... */);
 $this->assertIsArray($exceptionContext);
 $this->assertNotEmpty($exceptionContext);
 $this->assertArrayHasKey('exception', $exceptionContext);
-$this->assertInstanceOf(\DomainException::class, $exceptionContext['exception']);
+$this->assertInstanceOf(\Exception::class, $exceptionContext['exception']);
 $this->assertSame($expectedExceptionMessage, $exceptionContext['exception']->getMessage());
 ```
 
