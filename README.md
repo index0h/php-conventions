@@ -1556,7 +1556,7 @@ $this->assertEqual($expected->getTimestamp(), $actual->getTimestamp(), '', 2);
 
 Для разработки php проектов РЕКОМЕНДУЕТСЯ использовать [PhpStorm](https://www.jetbrains.com/phpstorm/).
 
-### 9.1. Инспекции
+### 9.1. Inspections и Code Style
 
 Настройки инспекций РЕКОМЕНДУЕТСЯ [импортировать](https://www.jetbrains.com/help/phpstorm/customizing-profiles.html) из
 `phpstorm/php-conventions-inspections.xml`. Данные инспекции используют
@@ -1564,3 +1564,6 @@ $this->assertEqual($expected->getTimestamp(), $actual->getTimestamp(), '', 2);
 
 Настройки код стайла РЕКОМЕНДУЕТСЯ [импортировать](https://www.jetbrains.com/help/phpstorm/configuring-code-style.html)
 из `phpstorm/php-conventions-code-style.xml`.
+
+**ВАЖНО** Inspections и Code Style содержат настройки только для PHP, по этой причине СТОИТ выполнять импорт
+как расширение схемы, выбрав опцию `Current scheme`.
