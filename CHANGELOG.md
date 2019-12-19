@@ -1,6 +1,7 @@
 ### 1.1
 
 - [#21](https://github.com/index0h/php-conventions/issues/21) 4.3. Инструкция switch
+- [#20](https://github.com/index0h/php-conventions/issues/20) 2.2. Дублирование типов в docblock
 
 ### 1.0
 
