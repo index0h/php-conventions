@@ -644,6 +644,7 @@ if ('abc' == 0) {
 switch ('abc') {
     case 0:
         echo 'wat';
+
         break;
 }
 
