@@ -264,7 +264,10 @@ $length = 12; // Отсутствует перевод строки
 
 ### 2.2. Дублирование типов в docblock
 
-Указание типов аргументов с помощью `@param` и `@return`, дублирующее сигнатуру метода НЕДОПУСТИМО.
+Указание типов аргументов с помощью `@param` и `@return`, дублирующее сигнатуру метода НЕДОПУСТИМО, кроме случаев:
+
+* Наличия комментария к параметрку, или результату.
+* Аннотации используются сторонними средствами: psalm, phan, phpstan, и т.д.
 
 ```php
 // Правильно
@@ -283,6 +286,17 @@ public function incrementProductPriceByName(string $productName, float $price): 
 public function incrementProductPriceByName(string $productName, float $price): bool
 {
 // ...
+```
+
+```php
+// Правильно
+/** 
+ * @param array $parsedUrl
+ * @phan-param array{scheme:string,host:string,path:string} $parsedUrl
+ * @psalm-param array{scheme:string,host:string,path:string} $parsedUrl  
+*/
+public function showUrl(string $label, array $parsedUrl, string $host): string
+{
 ```
 
 ### 2.3. Массивы в docblock
