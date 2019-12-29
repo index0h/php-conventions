@@ -906,7 +906,8 @@ printf("createdAt: %s, expiredAt: %s", $createdAt->format('Y-m-d'), $expiredAt->
 
 ### 5.4. DRY
 
-Принципу [DRY](https://ru.wikipedia.org/wiki/Don't_repeat_yourself) СЛЕДУЕТ придерживаться только в случае, когда он не противоречит SOLID и Здравому смыслу.
+Принципу [DRY](https://ru.wikipedia.org/wiki/Don't_repeat_yourself) СЛЕДУЕТ придерживаться только в случае, когда он не
+противоречит SOLID и Здравому смыслу.
 
 > Примеры, когда не стоит следовать принципу DRY:
 >
@@ -920,7 +921,8 @@ printf("createdAt: %s, expiredAt: %s", $createdAt->format('Y-m-d'), $expiredAt->
 
 ### 5.5. KISS
 
-Принципу [KISS](https://ru.wikipedia.org/wiki/KISS_(принцип)) СЛЕДУЕТ придерживаться только в случае, когда он не противоречит другим правилам данных рекомендаций.
+Принципу [KISS](https://ru.wikipedia.org/wiki/KISS_(принцип)) СЛЕДУЕТ придерживаться только в случае, когда он не
+противоречит другим правилам данных рекомендаций.
 
 > Примеры, когда не стоит следовать принципу KISS:
 >
