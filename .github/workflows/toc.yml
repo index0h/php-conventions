@@ -1,0 +1,17 @@
+on: push
+name: TOC Generator
+jobs:
+  generateTOC:
+    name: TOC Generator
+    runs-on: ubuntu-latest
+    steps:
+      - name: TOC Generator
+        uses: technote-space/toc-generator@v2
+        with:
+          TOC_TITLE: ''
+          COMMIT_MESSAGE: '[#0] update table of contents'
+          PR_BRANCH_PREFIX: 'feature/'
+          PR_BRANCH_NAME: '${PR_ID}-toc-generator-bot-0-update-table-of-contents'
+          PR_TITLE: '#0 update table of contents ${PR_ID}'
+          COMMIT_NAME: '#0 update table of contents'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
