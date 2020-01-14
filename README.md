@@ -127,7 +127,7 @@ $variableName = 'variableName';
 ```
 
 ```php
-// Не правильно
+// Неправильно
 $varName = 'varName';
 $variableName = 'variableName';
 ```
@@ -140,7 +140,7 @@ $secondVariableWithVeryLongNameHere =
 ```
 
 ```php
-// Не правильно
+// Неправильно
 $varName                            = 'varName';
 $secondVariableWithVeryLongNameHere
     = '123456790123456790123456790123456790123456790123456790123456790123456790123456790';
@@ -162,7 +162,7 @@ $variableName = '123456790123456790123456790123456790123456790123456790123456790
 ```
 
 ```php
-// Не правильно
+// Неправильно
 [
     'elementName' => 'elementName',
     'longNameElement' => 'longNameElement',
@@ -179,7 +179,7 @@ $variableName = '123456790123456790123456790123456790123456790123456790123456790
 ```
 
 ```php
-// Не правильно
+// Неправильно
 [
     'elementName'                       => 'elementName',
     'secondElementWithVeryLongNameHere'
@@ -210,7 +210,7 @@ $variableName = '123456790123456790123456790123456790123456790123456790123456790
 ```
 
 ```php
-// Не правильно
+// Неправильно
 [
     'firstElement'  => 'firstElement',
     'secondElement' => 'secondElement'
@@ -223,7 +223,7 @@ $variableName = '123456790123456790123456790123456790123456790123456790123456790
 ```
 
 ```php
-// Не правильно
+// Неправильно
 ['firstElement' => 'firstElement', 'secondElement' => 'secondElement',]
 ```
 
@@ -240,7 +240,7 @@ $this->firstMethod();
 ```
 
 ```php
-// Не правильно
+// Неправильно
 $this
     ->firstMethod();
 ```
@@ -253,12 +253,12 @@ $this
 ```
 
 ```php
-// Не правильно
+// Неправильно
 $this->firstMethod()->secondMethod();
 ```
 
 ```php
-// Не правильно
+// Неправильно
 $this
     ->firstMethod()->secondMethod();
 ```
@@ -278,7 +278,7 @@ $this
 ```
 
 ```php
-// Не правильно
+// Неправильно
 $this->firstMethod()->thirdMethod(
     $firstArgument,
     $secondArgument,
@@ -307,7 +307,7 @@ if ($count === 5) {
 ```
 
 ```php
-// Не правильно
+// Неправильно
 $count = 5; // Отсутствует перевод строки
 if ($count === 5) {
 // ...
@@ -326,7 +326,7 @@ $length = 12; // Отсутствует перевод строки
 ```
 
 ```php
-// Не правильно
+// Неправильно
 {
 
     // Лишняя пустая строка
@@ -359,7 +359,7 @@ public function incrementProductPriceByName(string $productName, float $price): 
 ```
 
 ```php
-// Не правильно
+// Неправильно
 /**
  * @param string $productName
  * @param float  $price
@@ -396,7 +396,7 @@ public function incrementProductPricesByNames(array $productNames, float $price)
 ```
 
 ```php
-// Не правильно
+// Неправильно
 /**
  * @param array $productNames
  */
@@ -422,7 +422,7 @@ public function mixedMethod($stringOrIntArgument)
 ```
 
 ```php
-// Не правильно
+// Неправильно
 /**
  * @param mixed $stringOrIntArgument
  * @return mixed
@@ -522,7 +522,7 @@ private $userNames;
 ```
 
 ```php
-// Не правильно
+// Неправильно
 /** @var string[] */
 private $data;
 ```
@@ -543,7 +543,7 @@ private $userIds;
 ```
 
 ```php
-// Не правильно
+// Неправильно
 /** @var string[] */
 private $userNames;
 /** @var int[] */
@@ -558,7 +558,7 @@ private $userIds;
 ```
 
 ```php
-// Не правильно
+// Неправильно
 {
 
     /** @var string[] */
@@ -573,7 +573,7 @@ private $userIds;
 ```
 
 ```php
-// Не правильно
+// Неправильно
     /** @var string[] */
     private $userNames;
 
@@ -599,7 +599,7 @@ public function findUserById(int $id): ?User
 ```
 
 ```php
-// Не правильно
+// Неправильно
 public function find(int $id): ?User
 ```
 
@@ -621,7 +621,7 @@ public function findUserByName(string $name): ?User
 ```
 
 ```php
-// Не правильно
+// Неправильно
 public function findUserById(int $id): ?User
 // ...
 }
@@ -637,7 +637,7 @@ public function findUserByName(string $name): ?User
 ```
 
 ```php
-// Не правильно
+// Неправильно
 {
 
     public function findUserById(int $id): ?User
@@ -650,7 +650,7 @@ public function findUserByName(string $name): ?User
 ```
 
 ```php
-// Не правильно
+// Неправильно
     public function findUserById(int $id): ?User
 
 }
@@ -693,7 +693,7 @@ public function concatStrings(string ...$parts): string
 ```
 
 ```php
-// Не правильно
+// Неправильно
 /**
  * @param string $parts
  */
@@ -829,7 +829,7 @@ if ($file === false) {
 > в рантайме.
 
 ```php
-// Не правильно
+// Неправильно
 $this->{$methodName}($argument);
 ```
 
@@ -1490,7 +1490,7 @@ $this->assertInstanceOf(JsonResponse::class, $response);
 ```
 
 ```php
-// Не правильно
+// Неправильно
 // В случае возникновения ошибки не будет ясно, что же за ошибка произошла, вместо этого получим только несоответствие
 // типа $response, или статус кода.
 /** @var JsonResponse|Response $response */
@@ -1513,7 +1513,7 @@ $this->assertSame($expectedExceptionMessage, $exceptionContext['exception']->get
 ```
 
 ```php
-// Не правильно
+// Неправильно
 $exceptionContext = $object->method(/* ... */);
 
 $this->assertSame($expectedExceptionMessage, $exceptionContext['exception']->getMessage());
@@ -1531,10 +1531,10 @@ $this->assertSame($expectedExceptionMessage, $exceptionContext['exception']->get
 // Правильно
 $this->assertSame($expectedString, $actualString);
 
-// Не правильно
+// Неправильно
 $this->assertSame(true, $expectedString === $actualString);
 
-// Не правильно
+// Неправильно
 $this->assertTrue($expectedString === $actualString);
 ```
 
@@ -1542,7 +1542,7 @@ $this->assertTrue($expectedString === $actualString);
 // Правильно
 $this->assertStringStartsWith($expectedPrefix, $actualString);
 
-// Не правильно
+// Неправильно
 $this->assertSame(0, strpos($actualString, $expectedPrefix));
 ```
 
@@ -1550,10 +1550,10 @@ $this->assertSame(0, strpos($actualString, $expectedPrefix));
 // Правильно
 $this->assertTrue($actualBool);
 
-// Не правильно
+// Неправильно
 $this->assertTrue($actualBool === true);
 
-// Не правильно
+// Неправильно
 $this->assertSame(true, $actualBool);
 ```
 
@@ -1584,7 +1584,7 @@ $userRepository
 ```
 
 ```php
-// Не правильно
+// Неправильно
 $userRepository
     ->expects($this->once())
     ->method('findByGroup')
@@ -1614,7 +1614,7 @@ $this->assertSame($expected, $actual);
 ```
 
 ```php
-// Не правильно
+// Неправильно
 $expected = 5;
 $actual   = 5;
 
