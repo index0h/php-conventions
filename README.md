@@ -348,7 +348,7 @@ $length = 12; // Отсутствует перевод строки
 
 Указание типов аргументов с помощью `@param` и `@return`, дублирующее сигнатуру метода НЕДОПУСТИМО, кроме случаев:
 
-* Наличия комментария к параметрку, или результату.
+* Наличия комментария к параметру, или результату.
 * Аннотации используются сторонними средствами: psalm, phan, phpstan, и т.д.
 
 ```php
@@ -379,6 +379,37 @@ public function incrementProductPriceByName(string $productName, float $price): 
 */
 public function showUrl(string $label, array $parsedUrl, string $host): string
 {
+```
+
+Указание типов свойств с помощью `@var`, дублирующее тип свойства НЕДОПУСТИМО, кроме случаев наличия комментария к
+свойству (php 7.4+).
+
+```php
+// Правильно (< php 7.4)
+/** @var string */
+private $productName;
+```
+
+```php
+// Неправильно (< php 7.4)
+private $productName;
+```
+
+```php
+// Правильно (php 7.4+)
+private ?string $productName;
+```
+
+```php
+// Правильно (php 7.4+)
+/** @var string|null Contains product name */
+private ?string $productName;
+```
+
+```php
+// Неправильно (php 7.4+)
+/** @var string|null */
+private ?string $productName;
 ```
 
 ### 2.3. Массивы в docblock
@@ -461,7 +492,10 @@ foreach ($rows as $row) {
 
 ### 2.6. Свойства
 
-Свойства класса ДОЛЖНЫ содержать docblock, определяющий все возможные типы значений, допустимые в нем.
+Свойства класса ДОЛЖНЫ содержать либо декларацию типа, либо docblock для всех возможных типов значений, которое оно
+может содержать.
+Дублировать и декларацию типа и docblock ДОПУСТИМО только в случаях, когда dockblock уточняет декларацию, либо при
+наличии комментария.
 Если docblock МОЖЕТ быть описан одной строкой — ДОЛЖЕН использоваться однострочный docblock.
 
 ```php
@@ -470,6 +504,13 @@ private $names;
 
 /** @var int|null */
 private $count;
+```
+
+```php
+/** @var string[]|null */
+private ?array $names;
+
+private ?int $count;
 ```
 
 ### 2.7. Методы и функции
@@ -672,7 +713,7 @@ public function findUserByName(string $name): ?User
 1. Типизированные аргументы.
 2. Nullable-аргументы.
 3. Опциональные аргументы.
-4. Аргумент с `...`.
+4. Аргумент с `...`. (php 7.4+)
 
 ```php
 public function firstExample(string $first, ?int $second, bool $third = false, float ...$fourth): string
